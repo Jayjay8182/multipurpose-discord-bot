@@ -1,0 +1,20 @@
+**Prefix** - `r/`
+Information
+`help` shows the list of commands
+`serverinfo` displays information about the server
+`ping` shows the latency of the bot
+
+Misc
+`mimic (your text)` mimics your message
+`sudo (username or mention or id + message)` pretends to be that user and sends that message
+`roll (lowestValue + highestValue)` rolls a number from a range
+`img (search term)` shows images results for your term
+
+Reddit
+`sub (subreddit name , type(top/hot/new/controversial) , timeframe(hour/day/week/month/all)))` 
+ shows 100 posts on a subreddit based on your filters
+`findsub (term)` shows all subreddits beginning with the term
+
+Investing
+`stocks (listing e.g. AMZN or TSLA)` shows the current price of a stock in USD
+`crypto (currency e.g. BTC or ETH)` shows the current price of a crypto currency in USD
