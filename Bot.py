@@ -28,7 +28,7 @@ token = read_token()
 client = commands.Bot(command_prefix=['r/', 'R/', '@chungus', '@Chungus'], case_insensitive=True)
 client.config_token = read_token()
 client.remove_command('help')
-owner_id = "176446054823100420"
+owner_id = ""
 reaction_emojis = ["⏪", "⬅️", "➡️", "⏩", "🔀", "❌"]
 
 
