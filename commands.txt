@@ -9,6 +9,7 @@ Misc
 `sudo (username or mention or id + message)` pretends to be that user and sends that message
 `roll (lowestValue + highestValue)` rolls a number from a range
 `img (search term)` shows images results for your term
+`blackjack` play a game of blackjack against the bot
 
 Reddit
 `sub (subreddit name , type(top/hot/new/controversial) , timeframe(hour/day/week/month/all)))` 
@@ -18,3 +19,8 @@ Reddit
 Investing
 `stocks (listing e.g. AMZN or TSLA)` shows the current price of a stock in USD
 `crypto (currency e.g. BTC or ETH)` shows the current price of a crypto currency in USD
+
+NSFW (requires NSFW Channel)-
+`Category1` shows a random  img
+`Category2` shows a random  img
+`Category3` shows a random  img
