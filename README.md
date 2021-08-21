@@ -28,11 +28,14 @@ A Multi-Purpose  Discord Bot template featuring commands for information, reddit
 - `Category2` shows a random Category1 img
 - `Category3` shows a random Category1 img
 
-*Extensions*
+*Extensions* (owner only)
 - `unload (extension)` unloads a command from the cogs folder
 - `load (extension)` loads a command from the cogs folder
 - `reload (extension)` reloads/updates a command from the cogs folder
 - `fullreload` reloads/updates all commands
+
+* The 'run' command allows you to execute python code from discord, you can use codeblocks too*
+* it is sandboxed to only allow access to certain modules and can be edited, DO NOT make this command available to anyone*
 
 # Info and usage
 **You will need to**
