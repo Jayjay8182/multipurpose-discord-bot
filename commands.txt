@@ -21,6 +21,7 @@ Investing
 `crypto (currency e.g. BTC or ETH)` shows the current price of a crypto currency in USD
 
 NSFW (requires NSFW Channel)-
-`Category1` shows a random  img
-`Category2` shows a random  img
-`Category3` shows a random  img
+`Ass` shows a random ass img
+`boobs` shows a random boobs img
+`pussy` shows a random pussy img
+
