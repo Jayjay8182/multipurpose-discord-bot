@@ -1,5 +1,7 @@
 # Discord.py-Bot
 A Multi-Purpose  Discord Bot template featuring commands for information, reddit browsing, investing and more.
+You can use this bot in your server by inviting it here if you wish https://discord.com/oauth2/authorize?client_id=733452893860135002&scope=bot&permissions=8
+You can use this code if you wish to but please dont straight up copy the bot, at least try to learn and understand the code for yourself that you take
 
 # Current Commands
 *Information*
