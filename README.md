@@ -28,6 +28,12 @@ A Multi-Purpose  Discord Bot template featuring commands for information, reddit
 - `Category2` shows a random Category1 img
 - `Category3` shows a random Category1 img
 
+*Extensions*
+- `unload (extension)` unloads a command from the cogs folder
+- `load (extension)` loads a command from the cogs folder
+- `reload (extension)` reloads/updates a command from the cogs folder
+- `fullreload` reloads/updates all commands
+
 # Info and usage
 **You will need to**
 - replace `owner_id` with your own owner id
@@ -39,6 +45,7 @@ A Multi-Purpose  Discord Bot template featuring commands for information, reddit
 - Alter command names or cooldowns
 - Customise the last 3 NSFW commmands, you must add your own subreddit names to the 3 lists
   there are three of these commands each for one category
+- Adding new commands will require you to make new cogs
 
 **You will have to have the following libraries installed so far:**
 - discord
