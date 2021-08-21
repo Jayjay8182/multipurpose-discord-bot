@@ -34,8 +34,8 @@ A Multi-Purpose  Discord Bot template featuring commands for information, reddit
 - `reload (extension)` reloads/updates a command from the cogs folder
 - `fullreload` reloads/updates all commands
 
-*The 'run' command allows you to execute python code from discord, you can use codeblocks too*
-*it is sandboxed to only allow access to certain modules and can be edited, DO NOT make this command available to anyone*
+<h1>The 'run' command allows you to execute python code from discord, you can use codeblocks too
+it is sandboxed to only allow access to certain modules and can be edited, DO NOT make this command available to anyone</h1>
 
 # Info and usage
 **You will need to**
