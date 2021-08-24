@@ -1,6 +1,6 @@
 # Discord.py-Bot
 
-##Important note: The 'run' command allows you to execute python code from a discord message (you can use codeblocks too). It is sandboxed to only allow access to certain modules and can be edited, DO NOT make this command available to anyone
+## Important note: The 'run' command allows you to execute python code from a discord message (you can use codeblocks too). It is sandboxed to only allow access to certain modules and can be edited, DO NOT make this command available to anyone
 
 A Multi-Purpose  Discord Bot template featuring commands for information, reddit browsing, investing and more.
 - You can use this bot in your server by inviting it here if you wish https://discord.com/oauth2/authorize?client_id=733452893860135002&scope=bot&permissions=8
