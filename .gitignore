@@ -1,10 +1,16 @@
-__pycache__
-Cogs/__pycache__
+# IMPORTANT: comment out if making changes other than reconfiguring
+Cogs/nsfw.py
 
+
+# cache, project files, ide folders etc.
+**/__pycache__
+**/.idea
+
+# vps stuff
 launch.sh
 log.txt
-.idea
 
+# sensitive data (and files that formerly contained sensitive data)
 token.txt
 config.txt
 conf.txt
