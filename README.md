@@ -27,8 +27,8 @@ A Multi-Purpose  Discord Bot template featuring commands for information, reddit
 
 *NSFW (requires NSFW Channel)*
 - `Category1` shows a random Category1 img
-- `Category2` shows a random Category1 img
-- `Category3` shows a random Category1 img
+- `Category2` shows a random Category2 img
+- `Category3` shows a random Category3 img
 
 *Extensions* (owner only)
 - `unload (extension)` unloads a command from the cogs folder
@@ -53,17 +53,20 @@ it is sandboxed to only allow access to certain modules and can be edited, DO NO
 - Adding new commands will require you to make new cogs
 
 **You will have to have the following libraries installed so far:**
-- discord
+*(python default libraries)*
 - datetime 
 - random
 - requests
 - asyncio
 - itertools
-- bs4 
-- ast
 - time
+- pprint 
 - collections.abc
+- ast
+*(you will have to install these)*
+- discord
+- bs4 
 - praw
 - yahoofinancials 
-- pprint 
+
 
