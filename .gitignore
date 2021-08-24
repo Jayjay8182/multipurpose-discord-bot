@@ -1,10 +1,21 @@
-# IMPORTANT: comment out if making changes other than reconfiguring
-Cogs/nsfw.py
-
+# uncomment if only configuring (changing sub lists, changing cmd names)
+#Cogs/nsfw.py
 
 # cache, project files, ide folders etc.
-**/__pycache__
-**/.idea
+**/__pycache__/
+**/.idea/
+*.py[cod]
+*$py.class
+
+# virtual environments
+**/.env/
+**/.venv/
+**/env/
+**/venv/
+
+#pip
+**/pip-log.txt
+**/pip-delete-this-directory.txt
 
 # vps stuff
 launch.sh
