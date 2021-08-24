@@ -8,7 +8,7 @@ from discord.ext import commands
 
 
 # reading config from config.txt
-with open("config.txt", "r") as f:
+with open("conf.txt", "r") as f:
     config = f.readlines()
 
 
