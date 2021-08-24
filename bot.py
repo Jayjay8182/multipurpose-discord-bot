@@ -9,13 +9,13 @@ from discord.ext import commands
 
 # reading discord api token from file
 def read_token():
-    with open("token.txt", "r") as f:
+    with open("config.txt", "r") as f:
         lines = f.readlines()
         return lines[0].strip()
 
 
 # creating an instance of the reddit api from file
-with open("token.txt", "r") as f:
+with open("config.txt", "r") as f:
     lines = f.readlines()
     reddit = praw.Reddit(
          client_id=lines[2].strip(),
