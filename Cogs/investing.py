@@ -1,7 +1,7 @@
 from discord.ext import commands
 from discord.ext.commands import BucketType
 import discord
-import Bot
+import bot
 from yahoofinancials import YahooFinancials
 import random
 
@@ -15,7 +15,7 @@ class investingCOG(commands.Cog):
     @commands.command()
     @commands.cooldown(rate=1, per=5, type=BucketType.user)
     async def stocks(self, ctx, stock):
-        Bot.command_used(ctx, "stocks")
+        bot.command_used(ctx, "stocks")
         data = YahooFinancials(stock)
         if str(data.get_current_price()) != "None" and str(data.get_current_price()) != "":
             print(data.get_current_price())
@@ -28,7 +28,7 @@ class investingCOG(commands.Cog):
     @commands.command()
     @commands.cooldown(rate=1, per=5, type=BucketType.user)
     async def crypto(self, ctx, coin, currency):
-        Bot.command_used(ctx, "crypto")
+        bot.command_used(ctx, "crypto")
         data = YahooFinancials(coin+"-"+currency)
         if str(data) != "None" and str(data) != "":
             await ctx.send(f"**{coin.upper()} - {currency.upper()}**\nCurrent Value: `{str(data.get_current_price())}`\nDaily Low/High: `"

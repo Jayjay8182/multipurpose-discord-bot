@@ -1,6 +1,6 @@
 from discord.ext import commands
 from discord.ext.commands import BucketType
-import Bot
+import bot
 
 
 # sends the latency of the bot
@@ -14,7 +14,7 @@ class pingCOG(commands.Cog):
     @commands.command()
     @commands.cooldown(rate=1, per=5, type=BucketType.user)
     async def ping(self, ctx):
-        Bot.command_used(ctx, "ping")
+        bot.command_used(ctx, "ping")
         await ctx.send("`"+str(int(bot_client.latency*1000))+"`ms")
 
 

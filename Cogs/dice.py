@@ -1,6 +1,6 @@
 from discord.ext import commands
 from discord.ext.commands import BucketType
-import Bot
+import bot
 import random
 
 

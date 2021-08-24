@@ -1,6 +1,6 @@
 from discord.ext import commands
 from discord.ext.commands import BucketType
-import Bot
+import bot
 
 
 class sudoCOG(commands.Cog):
@@ -16,7 +16,7 @@ class sudoCOG(commands.Cog):
     @commands.command()
     @commands.cooldown(rate=1, per=5, type=BucketType.user)
     async def sudo(self, ctx, user, *message):
-        Bot.command_used(ctx, "sudo")
+        bot.command_used(ctx, "sudo")
         user_to_copy = ctx.author
 
         if ctx.message.mentions:

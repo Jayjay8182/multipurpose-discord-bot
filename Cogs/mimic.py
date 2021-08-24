@@ -1,6 +1,6 @@
 from discord.ext import commands
 from discord.ext.commands import BucketType
-import Bot
+import bot
 
 
 class mimicCOG(commands.Cog):
@@ -13,7 +13,7 @@ class mimicCOG(commands.Cog):
     @commands.command(pass_context=True)
     @commands.cooldown(rate=1, per=5, type=BucketType.user)
     async def mimic(self, ctx, *args):
-        Bot.command_used(ctx, "mimic")
+        bot.command_used(ctx, "mimic")
         mimic_message = (" ".join(args))
         if '@' in mimic_message:
             await ctx.send("No pinging.")

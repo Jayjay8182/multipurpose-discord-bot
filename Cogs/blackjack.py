@@ -3,7 +3,7 @@ from discord.ext.commands import BucketType
 import discord
 import random
 import asyncio
-import Bot
+import bot
 import itertools
 from datetime import datetime
 
@@ -25,7 +25,7 @@ class blackjackCOG(commands.Cog):
 class blackjack_game():
     def __init__(self, ctx):
         self.ctx = ctx
-        Bot.command_used(self.ctx, "blackjack")
+        bot.command_used(self.ctx, "blackjack")
 
         # creating the deck, player and dealer hands
         self.game_over = False
@@ -67,7 +67,7 @@ class blackjack_game():
 
             # if the player has not stood, wait for them to hit or stand
             while not self.stand:
-                self.check = Bot.reaction_check(message=self.blackjack_Msg, author=self.ctx.author, emoji=("🇭", "🇸", "🛑"))
+                self.check = bot.reaction_check(message=self.blackjack_Msg, author=self.ctx.author, emoji=("🇭", "🇸", "🛑"))
 
                 try:
                     self.reaction, self.user = await bot_client.wait_for('reaction_add', timeout=90.0, check=self.check)

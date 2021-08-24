@@ -1,7 +1,7 @@
 from discord.ext import commands
 from discord.ext.commands import BucketType
 import discord
-import Bot
+import bot
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
@@ -18,7 +18,7 @@ class imgCOG(commands.Cog):
     @commands.command(pass_context = True)
     @commands.cooldown(rate=1, per=5, type=BucketType.user)
     async def img(self, ctx, *args):
-        Bot.command_used(ctx, "img")
+        bot.command_used(ctx, "img")
         term = (" ".join(args))
         url = 'https://bing.com/images/search?q=' + term + '&safeSearch=off' + '&count=100' + '&mkt=en-US' + '&adlt_set=off'
         user_agent_img = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Firefox/91.0"
@@ -36,12 +36,12 @@ class imgCOG(commands.Cog):
         img_embed.set_image(url=link_list[count])
         reacted_message = await ctx.channel.send(embed=img_embed)
 
-        for x in Bot.reaction_emojis:
+        for x in bot.reaction_emojis:
             await discord.Message.add_reaction(reacted_message, emoji=x)
 
         react_cross = False
         while not react_cross:
-            check = Bot.reaction_check(message=reacted_message, author=ctx.author, emoji=('➡️', '⬅️', '⏪', '⏩', '🔀', '❌'))
+            check = bot.reaction_check(message=reacted_message, author=ctx.author, emoji=('➡️', '⬅️', '⏪', '⏩', '🔀', '❌'))
             try:
                 reaction, user = await bot_client.wait_for('reaction_add', timeout=90.0, check=check)
                 if reaction.emoji == '➡️':

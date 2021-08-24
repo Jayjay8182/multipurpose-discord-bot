@@ -3,7 +3,7 @@ from discord.ext.commands import BucketType
 import discord
 import ast
 import time
-import Bot
+import bot
 from praw import reddit
 
 
@@ -34,7 +34,7 @@ class evalCOG(commands.Cog):
     @commands.is_owner()
     @commands.cooldown(rate=1, per=5, type=BucketType.user)
     async def run(self, ctx, *, cmd):
-        Bot.command_used(ctx, "run")
+        bot.command_used(ctx, "run")
         fn_name = "_eval_expr"
 
         cmd = cmd.strip("` ")
@@ -56,7 +56,7 @@ class evalCOG(commands.Cog):
             'commands': commands,
             'ctx': ctx,
             'time': time,
-            'client': Bot.client,
+            'client': bot.client,
             '__import__': __import__,
             'reddit': reddit
         }

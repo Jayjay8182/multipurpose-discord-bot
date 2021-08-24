@@ -6,7 +6,7 @@ import praw
 import discord
 from discord.ext import commands
 
-config = []
+
 # reading config from config.txt
 with open("config.txt", "r") as f:
     config = f.readlines()
@@ -46,6 +46,12 @@ async def on_ready():
     pprint(client.guilds)
     print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
+@client.event
+async def on_message(message):
+    # check if a user mentions the bot, likely unsure of the prefix
+    mention = f'<@!{client.user.id}>'
+    if mention in message.content:
+        await message.channel.send(f"My prefix is `{prefix}`, use `{prefix}help` to see more information", delete_after=5)
 
 #  error handling
 #  this catches all errors but can be overridden for specific commands

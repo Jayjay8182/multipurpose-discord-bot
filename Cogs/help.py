@@ -1,7 +1,7 @@
 from discord.ext import commands
 from discord.ext.commands import BucketType
 import discord
-import Bot
+import bot
 
 
 class helpCOG(commands.Cog):
@@ -15,7 +15,7 @@ class helpCOG(commands.Cog):
     @commands.command(aliases=['commands', 'prefix'])
     @commands.cooldown(rate=1, per=5, type=BucketType.user)
     async def help(self, ctx):
-        Bot.command_used(ctx, "help")
+        bot.command_used(ctx, "help")
         with open("commands.txt", 'r') as file:
             commands = file.read()
             commands_embed = discord.Embed(color=0x7A6C6C)

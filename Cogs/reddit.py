@@ -1,7 +1,7 @@
 from discord.ext import commands
 from discord.ext.commands import BucketType
 import discord
-import Bot
+import bot
 import random
 import praw
 
@@ -19,8 +19,8 @@ class redditCOG(commands.Cog):
     async def sub(self, ctx, sub_name, type="top", timeframe="all"):
         error = False
         try:
-            Bot.command_used(ctx, "sub")
-            sub = Bot.reddit.subreddit(sub_name)
+            bot.command_used(ctx, "sub")
+            sub = bot.reddit.subreddit(sub_name)
             time_filter = "all"
             filter = "top"
             subreddit_category_posts = sub.top("all", limit=100)
@@ -67,7 +67,7 @@ class redditCOG(commands.Cog):
             reacted_message = await ctx.send(message_template)
 
             # add the reactions for scrolling
-            for x in Bot.reaction_emojis:
+            for x in bot.reaction_emojis:
                 await discord.Message.add_reaction(reacted_message, emoji=x)
 
             react_cross = False
@@ -103,10 +103,10 @@ class redditCOG(commands.Cog):
     @commands.command(pass_context = True)
     @commands.cooldown(rate=1, per=5, type=BucketType.user)
     async def findsub(self, ctx, sub_name):
-        Bot.command_used(ctx, "find sub")
+        bot.command_used(ctx, "find sub")
         subList = ""
 
-        for subreddit in Bot.reddit.subreddits.search_by_name(str(sub_name)):
+        for subreddit in bot.reddit.subreddits.search_by_name(str(sub_name)):
             subList += subreddit.display_name+"\n"
 
         if subList != "":

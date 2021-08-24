@@ -1,7 +1,7 @@
 from discord.ext import commands
 from discord.ext.commands import BucketType
 import discord
-import Bot
+import bot
 import random
 from datetime import datetime
 
@@ -38,9 +38,9 @@ class nsfwCOG(commands.Cog):
         await self.nsfw("category3", ctx, self.category3_subreddits)
 
     async def nsfw(self, category, ctx, subs):
-        Bot.command_used(ctx, category)
+        bot.command_used(ctx, category)
         posts = []
-        for submission in Bot.reddit.subreddit(random.choice(subs)).top(random.choice(("month", "year", "all")), limit=100):
+        for submission in bot.reddit.subreddit(random.choice(subs)).top(random.choice(("month", "year", "all")), limit=100):
             posts.append(submission)
             posts.append(submission)
 

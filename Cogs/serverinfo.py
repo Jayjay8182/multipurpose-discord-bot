@@ -1,7 +1,7 @@
 from discord.ext import commands
 from discord.ext.commands import BucketType
 import discord
-import Bot
+import bot
 from datetime import datetime
 
 
@@ -15,7 +15,7 @@ class serverinfoCOG(commands.Cog):
     @commands.command(aliases=['info'])
     @commands.cooldown(rate=1, per=5, type=BucketType.user)
     async def serverinfo(self, ctx):
-        Bot.command_used(ctx, "server info")
+        bot.command_used(ctx, "server info")
         member_count = len(ctx.guild.members)
 
         serverInfoEmbed = discord.Embed(title=" Server Stats for "+str(ctx.guild), timestamp=datetime.utcnow(), color=0x7A6C6C)
