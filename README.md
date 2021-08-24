@@ -1,4 +1,8 @@
 # Discord.py-Bot
+
+<h2>Important note: The 'run' command allows you to execute python code from a discord message (you can use codeblocks too)
+it is sandboxed to only allow access to certain modules and can be edited, DO NOT make this command available to anyone</h2>
+
 A Multi-Purpose  Discord Bot template featuring commands for information, reddit browsing, investing and more.
 - You can use this bot in your server by inviting it here if you wish https://discord.com/oauth2/authorize?client_id=733452893860135002&scope=bot&permissions=8
 - You can use this code if you wish to but please dont straight up copy the bot, at least try to learn and understand the code for yourself that you take
@@ -35,9 +39,6 @@ A Multi-Purpose  Discord Bot template featuring commands for information, reddit
 - `load (extension)` loads a command from the cogs folder
 - `reload (extension)` reloads/updates a command from the cogs folder
 - `fullreload` reloads/updates all commands
-
-<h1>The 'run' command allows you to execute python code from discord, you can use codeblocks too
-it is sandboxed to only allow access to certain modules and can be edited, DO NOT make this command available to anyone</h1>
 
 # Info and usage
 **You will need to**
