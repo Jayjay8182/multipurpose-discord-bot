@@ -42,8 +42,7 @@ it is sandboxed to only allow access to certain modules and can be edited, DO NO
 # Info and usage
 **You will need to**
 - replace `owner_id` with your own owner id
-- supply your own bot application token, the bot currently gets this from a file called token.txt on line 0
-- supply your own reddit developer application credentials, the bot currently gets this from a file called token.txt on lines 2-6
+- fill in the config.txt file with your own bot application token, bot prefix, and your own reddit developer application credentials
 
 **You may want to**
 - Change the prefix of the bot from r/
