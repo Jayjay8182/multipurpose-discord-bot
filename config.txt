@@ -1,0 +1,7 @@
+discord token
+bot prefix
+reddit client id
+reddit client secret
+reddit username
+reddit password
+useragent

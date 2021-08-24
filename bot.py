@@ -6,29 +6,27 @@ import praw
 import discord
 from discord.ext import commands
 
-
-# reading discord api token from file
-def read_token():
-    with open("token.txt", "r") as f:
-        lines = f.readlines()
-        return lines[0].strip()
+config = []
+# reading config from config.txt
+with open("config.txt", "r") as f:
+    config = f.readlines()
 
 
-# creating an instance of the reddit api from file
-with open("token.txt", "r") as f:
-    lines = f.readlines()
-    reddit = praw.Reddit(
-         client_id=lines[2].strip(),
-         client_secret=lines[3].strip(),
-         username=lines[4].strip(),
-         password=lines[5].strip(),
-         user_agent=lines[6].strip())
+# creating an instance of the reddit api
+reddit = praw.Reddit(
+     client_id=config[2].strip(),
+     client_secret=config[3].strip(),
+     username=config[4].strip(),
+     password=config[5].strip(),
+     user_agent=config[6].strip()
+)
 
 # creating variables for discord api interaction
-token = read_token()
-client = commands.Bot(command_prefix=['r/', 'R/', '@chungus', '@Chungus'], case_insensitive=True)  # setting multiple prefixes
+token = config[0].strip()
+prefix = config[1].strip()
+client = commands.Bot(command_prefix=[prefix, prefix.lower()], case_insensitive=True)  # setting prefix
 client.config_token = read_token()
-client.remove_command('help')  # removing the default help command to replace with our own COG
+client.remove_command("help")  # removing the default help command to replace with our own COG
 reaction_emojis = ["⏪", "⬅️", "➡️", "⏩", "🔀", "❌"]  # list of emotes used for scrolling embeds which can be reused
 
 
