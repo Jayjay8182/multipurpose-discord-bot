@@ -63,7 +63,9 @@ it is sandboxed to only allow access to certain modules and can be edited, DO NO
 - pprint 
 - collections.abc
 - ast
+
 *(you will have to install these)*
+
 - discord
 - bs4 
 - praw
