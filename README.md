@@ -53,7 +53,9 @@ it is sandboxed to only allow access to certain modules and can be edited, DO NO
 - Adding new commands will require you to make new cogs
 
 **You will have to have the following libraries installed so far:**
+
 *(python default libraries)*
+
 - datetime 
 - random
 - requests
