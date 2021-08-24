@@ -21,11 +21,11 @@ reddit = praw.Reddit(
      user_agent=config[6].strip()
 )
 
+
 # creating variables for discord api interaction
-token = config[0].strip()
+client.config_token = config[0].strip()
 prefix = config[1].strip()
-client = commands.Bot(command_prefix=[prefix, prefix.lower()], case_insensitive=True)  # setting prefix
-client.config_token = token
+client = commands.Bot(command_prefix=[prefix, prefix.upper(), prefix.lower()], case_insensitive=True)  # setting prefix
 client.remove_command("help")  # removing the default help command to replace with our own COG
 reaction_emojis = ["⏪", "⬅️", "➡️", "⏩", "🔀", "❌"]  # list of emotes used for scrolling embeds which can be reused
 
@@ -41,16 +41,15 @@ def command_used(context, command):
 async def on_ready():
     await client.change_presence(activity=discord.Streaming(name="r/help", url="https://twitch.tv/jayjay8182"))
     print("bot connected")
-    print("current latency "+str(int(client.latency*1000))+"ms")
+    print(f"current latency {int(client.latency*1000)}ms")
     print(f"bot is in {len(client.guilds)} guilds:")
-    pprint(client.guilds)
+    pprint(client.guilds) # debug info
     print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
 @client.event
 async def on_message(message):
     # check if a user mentions the bot, likely unsure of the prefix
-    mention = f'<@!{client.user.id}>'
-    if mention in message.content:
+    if (f'<@{client.user.id}>' in message.content) or (f'<@!{client.user.id}>' in message.content):
         await message.channel.send(f"My prefix is `{prefix}`, use `{prefix}help` to see more information", delete_after=5)
 
 #  error handling
@@ -130,16 +129,13 @@ def reaction_check(message=None, emoji=None, author=None, ignore_bot=True):
     emoji = make_sequence(emoji)
     author = make_sequence(author)
     def check(reaction, user):
-        if ignore_bot and user.bot:
-            return False
-        if message and reaction.message.id not in message:
-            return False
-        if emoji and reaction.emoji not in emoji:
-            return False
-        if author and user not in author:
+        if (ignore_bot and user.bot) or \
+            (message and reaction.message.id not in message) or \
+            (emoji and reaction.emoji not in emoji) or \
+            (author and user not in author):
             return False
         return True
-    return check
+    return check(None, None) # todo: this function needs correct params
 
 # load / reload / unload COGs during runtime
 # allows new commands to be added without restarting
