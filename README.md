@@ -1,5 +1,8 @@
-# Discord.py-Bot
-A Multi-Purpose  Discord Bot template featuring commands for information, reddit browsing, investing and more.
+# multipurpose-discord-bot
+
+## Important note: The 'run' command allows you to execute python code from a discord message (you can use codeblocks too). It is sandboxed to only allow access to certain modules and can be edited, DO NOT make this command available to anyone
+
+A multi-purpose Discord bot featuring commands for information, reddit browsing, investing and more.
 - You can use this bot in your server by inviting it here if you wish https://discord.com/oauth2/authorize?client_id=733452893860135002&scope=bot&permissions=8
 - You can use this code if you wish to but please dont straight up copy the bot, at least try to learn and understand the code for yourself that you take
 
@@ -36,22 +39,19 @@ A Multi-Purpose  Discord Bot template featuring commands for information, reddit
 - `reload (extension)` reloads/updates a command from the cogs folder
 - `fullreload` reloads/updates all commands
 
-<h1>The 'run' command allows you to execute python code from discord, you can use codeblocks too
-it is sandboxed to only allow access to certain modules and can be edited, DO NOT make this command available to anyone</h1>
-
 # Info and usage
 **You will need to**
 - replace `owner_id` with your own owner id
-- fill in the config.txt file with your own bot application token, bot prefix, and your own reddit developer application credentials
+- fill in the config.txt file with your own bot application token, bot prefix, and your own reddit developer application credentials (see config_example.txt)
 
 **You may want to**
-- Change the prefix of the bot from r/
+- Change the prefix of the bot
 - Alter command names or cooldowns
 - Customise the last 3 NSFW commmands, you must add your own subreddit names to the 3 lists
   there are three of these commands each for one category
 - Adding new commands will require you to make new cogs
 
-**You will have to have the following libraries installed so far:**
+**You will have to have the following libraries installed:**
 
 *(python default libraries)*
 
