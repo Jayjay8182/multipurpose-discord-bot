@@ -1,5 +1,5 @@
-**Prefix** - `r/`
-Information
+*(Prefix - `r/`)*
+**Information**
 `help` shows the list of commands
 `serverinfo` displays information about the server
 `ping` shows the latency of the bot
