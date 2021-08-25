@@ -23,9 +23,9 @@ reddit = praw.Reddit(
 
 
 # creating variables for discord api interaction
-client.config_token = config[0].strip()
 prefix = config[1].strip()
 client = commands.Bot(command_prefix=[prefix, prefix.upper(), prefix.lower()], case_insensitive=True)  # setting prefix
+client.config_token = config[0].strip()
 client.remove_command("help")  # removing the default help command to replace with our own COG
 reaction_emojis = ["⏪", "⬅️", "➡️", "⏩", "🔀", "❌"]  # list of emotes used for scrolling embeds which can be reused
 
