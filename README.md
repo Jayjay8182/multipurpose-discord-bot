@@ -1,3 +1,4 @@
+# This project uses the old discord.py and has been archived
 # multipurpose-discord-bot
 
 ## Important note: The 'run' command allows you to execute python code from a discord message (you can use codeblocks too). It is sandboxed to only allow access to certain modules and can be edited, DO NOT make this command available to anyone
